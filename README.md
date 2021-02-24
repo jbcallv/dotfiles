@@ -39,7 +39,7 @@ Arch Linux dotfiles for muh rice
 <ul>
   <li>cmatrix not transparent - you have to do the following to install rather than using package manager:
     <ul>
-      <li>```git clone https://github.com/abishekvashok/cmatrix.git```</li>
+      <li><pre>git clone https://github.com/abishekvashok/cmatrix.git</pre></li>
       <li>```cd cmatrix```</li>
       <li>```autoreconf -i```</li>
       <li>```./configure```</li>
