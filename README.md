@@ -32,5 +32,6 @@ Arch Linux dotfiles for muh rice
   <li>Spotify</li>
   <li>Cmake</li>
   <li>Thunar</li>
+  <li>cmatrix</li>
 </ul>
   
