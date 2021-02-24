@@ -20,6 +20,7 @@ Arch Linux dotfiles for muh rice
   <li>gotop - shows running processes</li>
   <li>ranger - terminal file manager</li>
   <li>font-awesome - polybar icons</li>
+  <li>pywal - wallpaper color changing support</li>
 </ul>
 
 # Installed Applications
