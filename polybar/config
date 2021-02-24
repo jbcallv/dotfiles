@@ -60,9 +60,9 @@ font-0 = FontAwesome:style=Regular:size=10
 font-1 = FontAwesome 5 Free:style=Regular:pixelsize=9;1
 font-2 = FontAwesome 5 Free:style=Solid:pixelsize=9;1
 
-modules-left = i3 mpd
+modules-left = i3
 ;modules-center = 
-modules-right = pulseaudio memory cpu wlan eth battery temperature date powermenu
+modules-right = wireless-network volume wlan eth battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -112,6 +112,32 @@ label-mounted = %{F#689d68}%mountpoint%%{F-}: %percentage_used%%
 ;label-mounted = %mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/wireless-network]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected-prefix = " "
+
+format-connected-background = ${colors.background}
+format-connected = "   <ramp-signal> <label-connected>  "
+format-connected-underline = ${colors.underscore}
+label-connected =
+
+format-disconnected = " no wifi :( "
+format-disconnected-background = ${colors.background-unf}
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = "    0%"
+ramp-signal-1 = "    25%"
+ramp-signal-2 = "    50%"
+ramp-signal-3 = "    75%"
+ramp-signal-4 = "    100%"
+ramp-signal-foreground = ${colors.foreground-alt}
+
 
 [module/bspwm]
 type = internal/bspwm
@@ -228,7 +254,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.underscore}
 label = %percentage:2%%
@@ -236,7 +262,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = "Mem. "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.underscore}
 label = %percentage_used%%
@@ -265,7 +291,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = eno1
+interface = enp2s0
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -289,11 +315,38 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix =  
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.underscore}
 
 label = %date% %time%
+
+[module/volume]
+type = internal/pulseaudio
+
+master-soundcard = hw:1
+speaker-soundcard = hw:1
+headphone-soundcard = hw:1
+
+master-mixer = Master
+
+speaker-mixer = Speaker
+headphone-mixer = Headphone
+
+headphone-id = 9
+
+mapped = true
+
+format-muted-background = ${colors.background}
+format-volume-background = ${colors.background}
+format-volume = "<ramp-volume>   <label-volume>"
+;format-volume-prefix = " "
+label-muted = "   mute   "
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+
+format-volume-underline = ${colors.underscore}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -362,24 +415,24 @@ format-charging-underline = ${colors.underscore}
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 =  
+ramp-capacity-2 =  
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -410,7 +463,7 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.foreground}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
