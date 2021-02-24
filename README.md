@@ -19,6 +19,7 @@ Arch Linux dotfiles for muh rice
   <li>htop</li>
   <li>gotop</li>
   <li>ranger</li>
+  <li>font-awesome - polybar icons</li>
 </ul>
 
 # Installed Applications
