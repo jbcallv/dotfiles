@@ -21,6 +21,8 @@ Arch Linux dotfiles for muh rice
   <li>ranger - terminal file manager</li>
   <li>font-awesome - polybar icons</li>
   <li>pywal - wallpaper color changing support</li>
+  <li>xautolock - to automatically lock screen after x minutes</li>
+  <li>scrot - takes screenshot for xautolock</li>
 </ul>
 
 # Installed Applications
