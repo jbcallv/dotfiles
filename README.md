@@ -1,6 +1,6 @@
 # Dotfiles
 Arch Linux dotfiles for muh rice
-![Demo](rice.png)
+![Demo](rice1.png)
 
 # Dependencies
 <ul> 
