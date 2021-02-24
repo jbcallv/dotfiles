@@ -40,15 +40,15 @@ Arch Linux dotfiles for muh rice
   <li>cmatrix not transparent - you have to do the following to install rather than using package manager:
     <ul>
       <li><pre>git clone https://github.com/abishekvashok/cmatrix.git</pre></li>
-      <li>```cd cmatrix```</li>
-      <li>```autoreconf -i```</li>
-      <li>```./configure```</li>
-      <li>```make```</li>
-      <li>```make install```</li>
+      <li><pre>cd cmatrix</pre></li>
+      <li><pre>autoreconf -i</pre></li>
+      <li><pre>./configure</pre></li>
+      <li><pre>make</pre></li>
+      <li><pre>make install</pre></li>
     </ul>
   </li>
    
-  <li>gotop font issues - make sure you use the .Xresources file in my repo and run ```xrdb .Xresource```</li>
-  <li>urxvt font issues - make sure you use the .Xresources file in my repo and run ```xrdb .Xresources```</li>
+  <li>gotop font issues - make sure you use the .Xresources file in my repo and run <pre>xrdb .Xresource</pre></li>
+  <li>urxvt font issues - make sure you use the .Xresources file in my repo and run <pre>xrdb .Xresources</pre></li>
   <li>cava audio issues - go to pavucontrol and set the right input method</li>
 </ul>
