@@ -1,5 +1,5 @@
 # Dotfiles
-Arch Linux dotfiles for muh rice
+Arch Linux dotfiles for my Linux rice
 ![Demo](rice1.png)
 
 # Dependencies
