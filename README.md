@@ -2,6 +2,9 @@
 Arch Linux dotfiles for my Linux rice
 ![Demo](rice1.png)
 
+# r/unicorn post with 823 up votes:
+ https://www.reddit.com/r/unixporn/comments/lrc7bu/i3gaps_minimalist_arch_linux_rice/?utm_medium=android_app&utm_source=share
+
 # Dependencies
 <ul> 
   <li>rofi - dmenu replacement</li>
